@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Yomogi';
+  src: url('Yomogi-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap; 
+}
+
+html {
+  font-family: 'Yomogi';
+  font-size: 115%;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  color: #dbdbdbe3;
+  background-color: #020003;
+  background-image: 
+    linear-gradient(to right, rgba(139, 0, 35, 0.16) 1px, transparent 4px),
+    linear-gradient(to bottom, rgba(139, 0, 35, 0.16) 1px, transparent 4px);
+  background-size: 50px 50px, 50px 50px;
+  background-position: center bottom, center bottom;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+p {
+  color: #DBDBDBE3;
+}
+
+.header {
+  background: linear-gradient(180deg, rgba(34, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 4em 1em 3em 1em;
+  font-family: monospace;
+}
+
+.header h1 {
+  color: #dd0000;
+  text-shadow: 0 0 15px rgba(255, 0, 60, 0.4), 0 0 2px white;
+  text-transform: lowercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.header h1::before {
+  content: "[ ";
+  opacity: 0.5;
+}
+
+.header h1::after {
+  content: " ]";
+  opacity: 0.5;
+}
+
+.header h1:hover {
+  color: #ff003c;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.8), 0 0 4px white;
+  cursor: pointer;
+}
+
+.strip {
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 2.5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 90%;
+  border-left: 2px solid #8b002366;
+  border-right: 2px solid #8b002366;
+  border-top: 2px solid #8b002366;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+}
+
+h2 {
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+  color: #dbdbdb;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ffffff12;
+  margin: 1.5em 0;
+}
+
+video {
+  max-height: 55vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  opacity: 0.95;
+  color: #dbdbdb;
+}
+
+h4 {
+  margin-top: 0.2em;
+  font-size: 1.1rem;
+  color: #8b0023;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+hr {
+  color: #8b0023;
+  border: 0;
+  border-top: 1px dashed #8b0023;
+  margin: 2.5em 10%;
+}
