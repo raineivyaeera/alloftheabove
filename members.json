@@ -1,0 +1,23 @@
+[
+  {
+    "name": "raine eera",
+    "role": "site creator, musician, photographer",
+    "bio": "site creator, massive nerd. also gay.",
+    "links": []
+  },
+  {
+    "name": "lowlandsotaku",
+    "role": "musician, artist",
+    "bio": "n/a",
+    "links": [
+      {
+        "url": "https://lowlandsotaku.bandcamp.com/album/love-what-is-left",
+        "label": "Bandcamp"
+      },
+      {
+        "url": "https://www.youtube.com/@lowlandsotaku",
+        "label": "YouTube"
+      }
+    ]
+  }
+]
