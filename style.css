@@ -169,16 +169,41 @@ audio {
 
 .member {
     text-align: left;
-    padding: 0.5em 0;
+    padding: 0.5em;
+}
+
+.member-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5em;
+}
+
+.member-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.member-pfp {
+    width: 6em;
+    border-radius: 50%;
+    border: 1px solid #ff003c66;
+    box-shadow: 0 0 10px #ff003c66;
+}
+
+.member-name {
+    font-size: 1.8rem;
+    margin: 0;
 }
 
 .member-role {
+    display: inline-block;
     font-family: monospace;
     font-size: 0.85rem;
     color: #8b0023;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 0 0 0.75em 0;
 }
 
 .member-links {
@@ -202,5 +227,5 @@ audio {
 
 .member-links a:hover {
     color: #ff003c;
-    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+    text-shadow: 0 0 8px #ff003c66;
 }

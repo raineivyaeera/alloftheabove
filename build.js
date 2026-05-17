@@ -109,7 +109,8 @@ function renderPost(post) {
 
 function renderMember(member) {
     let links = '';
-
+    let pfp = '';
+    
     if (member.links?.length) {
         links = `
     <ul class="member-links">
@@ -123,13 +124,30 @@ function renderMember(member) {
     </ul>`;
     }
 
+    //if member has a pfp, use it. otherwise, use a default placeholder image
+    if (member.pfp) {
+        pfp = member.pfp;
+    } else {
+        pfp = '/pfps/temp.jpg';
+    }
+
     return `
   <div class="member">
-    <h2>${member.name}</h2>
-
-    <p class="member-role">
-      ${member.role}
-    </p>
+    <div class="member-header">
+    
+      <img class="member-pfp" src="${pfp}" alt="${member.name}'s profile picture">
+    
+      <div class="member-text">
+    
+        <h2 class="member-name">
+          ${member.name}
+        </h2>
+    
+        <p class="member-role">
+          ${member.role}
+        </p>
+      </div>
+    </div>
 
     <p class="member-bio">
       ${member.bio}

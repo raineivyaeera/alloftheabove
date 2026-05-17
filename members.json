@@ -1,27 +1,14 @@
 [
   {
     "name": "raine eera",
+    "pfp": "",
     "role": "site creator, musician, photographer",
     "bio": "site creator, massive nerd. also gay.",
     "links": []
   },
   {
-    "name": "lowlandsotaku",
-    "role": "musician, artist",
-    "bio": "n/a",
-    "links": [
-      {
-        "url": "https://lowlandsotaku.bandcamp.com/album/love-what-is-left",
-        "label": "Bandcamp"
-      },
-      {
-        "url": "https://www.youtube.com/@lowlandsotaku",
-        "label": "YouTube"
-      }
-    ]
-  },
-  {
     "name": "ansamko",
+    "pfp": "/pfps/ansamko-pfp.webp",
     "role": "game/web developer, designer",
     "bio": "some sort of a gay creature, maybe working on the site, maybe not. who knows.",
     "links": [
@@ -34,5 +21,21 @@
         "label": "Bluesky"
       }
     ] 
+  },
+  {
+    "name": "lowlandsotaku",
+    "pfp": "",
+    "role": "musician, artist",
+    "bio": "n/a",
+    "links": [
+      {
+        "url": "https://lowlandsotaku.bandcamp.com/album/love-what-is-left",
+        "label": "Bandcamp"
+      },
+      {
+        "url": "https://www.youtube.com/@lowlandsotaku",
+        "label": "YouTube"
+      }
+    ]
   }
 ]
