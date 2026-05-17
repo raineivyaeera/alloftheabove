@@ -94,14 +94,31 @@ function media(post) {
 }
 
 function renderPost(post) {
-    return `
+  let pfp = '';
+  let member = null;
+
+  // if author name doesn't match any member, log a warning and use a default placeholder image
+  try {
+    member = members.find(m => m.name === post.author);
+    // if member has pfp, use it. otherwise, use a default placeholder image
+    if (member.pfp) {
+      pfp = member.pfp;
+    } else {
+      pfp = '/pfps/temp.jpg';
+    }
+  } catch (error) {
+    console.error(`⚠️ Author name doesn't match any member for post "${post.title}":`);
+    pfp = '/pfps/temp.jpg';
+  }
+
+  return `
   <div class="post">
     <h2>${post.title}</h2>
 
     ${media(post)}
 
     <div class="post-meta">
-      <h3>by ${post.author}</h3>
+      <h3>by ${post.author} <span> <img class="post-author-pfp" src="${pfp}"> </span></h3>
       <h4>${post.date}</h4>
     </div>
   </div>`;
@@ -259,7 +276,7 @@ const membersPage =
       <h2>about & why</h2>
 
       <p>
-	    all of the above is a multimedia art collective with no bounary on medium. photography, drawings, songs, audio, video, visual fx, experiments, the abstract and the pristine porcelain. all of it has a home here.
+	    all of the above is a multimedia art collective with no boundary on medium. photography, drawings, songs, audio, video, visual fx, experiments, the abstract and the pristine porcelain. all of it has a home here.
       </p>
     </div>
 

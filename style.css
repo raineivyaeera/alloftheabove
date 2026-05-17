@@ -163,6 +163,17 @@ audio {
     font-size: 0.9rem;
 }
 
+.post-author-pfp {
+    width: 1.5em;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ff003c66;
+    box-shadow: 0 0 10px #ff003c66;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
 .members-intro p {
     opacity: 0.92;
 }
