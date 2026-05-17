@@ -19,5 +19,20 @@
         "label": "YouTube"
       }
     ]
+  },
+  {
+    "name": "ansamko",
+    "role": "game/web developer, designer",
+    "bio": "some sort of a gay creature, maybe working on the site, maybe not. who knows.",
+    "links": [
+      {
+        "url": "https://ansamko.itch.io/",
+        "label": "Itch.io"
+      },
+      {
+        "url": "https://bsky.app/profile/ansamko.fi",
+        "label": "Bluesky"
+      }
+    ] 
   }
 ]
