@@ -20,5 +20,13 @@
     "date": "May 15th, 2026",
     "type": "youtube",
     "src": "https://www.youtube.com/embed/DzhcAV3ntmA?si=-Xzg86camfZKF5_c"
+  },
+    {
+    "title": "[iridescence // 01]",
+    "author": "ansamko",
+    "date": "May 18th, 2026",
+    "type": "image",
+    "src": "imgs/gradient.webp",
+    "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora."
   }
 ]
