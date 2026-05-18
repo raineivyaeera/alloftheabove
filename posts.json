@@ -5,21 +5,24 @@
     "date": "May 14th, 2026",
     "type": "image",
     "src": "imgs/sunvox_btop.jpg",
-    "alt": "abstract over exposed picture showing btop and sunvox poking in the left a bit."
+    "alt": "abstract over exposed picture showing btop and sunvox poking in the left a bit.",
+    "description": "asdf"
     },
     {
     "title": "The Mermaid That Could",
     "author": "raine eera",
     "date": "May 14th, 2026",
     "type": "video",
-    "src": "vids/the little mermaid that could.mp4"
+    "src": "vids/the little mermaid that could.mp4",
+    "description": "asdf"
     },
     {
     "title": "Love What is Left",
     "author": "lowlandsotaku",
     "date": "May 15th, 2026",
     "type": "youtube",
-    "src": "https://www.youtube.com/embed/DzhcAV3ntmA?si=-Xzg86camfZKF5_c"
+    "src": "https://www.youtube.com/embed/DzhcAV3ntmA?si=-Xzg86camfZKF5_c",
+    "description": "asdf"
     },
     {
     "title": "[iridescence // 01]",
@@ -27,13 +30,23 @@
     "date": "May 18th, 2026",
     "type": "image",
     "src": "imgs/gradient.webp",
-    "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora."
+    "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora.",
+    "description": "asdf"
     },
     {
     "title": "Vorp (Generative Sunvox)",
     "author": "raine eera",
     "date": "May 18th, 2026",
     "type": "audio",
-    "src": "audios/vorp_gensunvox.ogg"
+    "src": "audios/vorp_gensunvox.ogg",
+    "description": "asdf"
+    },
+    {
+    "title": "Heartbox Corner",
+    "author": "raine eera",
+    "date": "May 18th, 2026",
+    "type": "audio",
+    "src": "audios/5.17.26 - Heartbox Corner.ogg",
+    "description": "asdf"
     }
 ]
