@@ -169,9 +169,10 @@ audio {
     border-radius: 50%;
     border: 1px solid #ff003c66;
     box-shadow: 0 0 10px #ff003c66;
-    vertical-align: sub;
+    vertical-align: text-top;
     margin: 0;
     padding: 0;
+    margin-left: 0.2em;
 }
 
 .members-intro p {
