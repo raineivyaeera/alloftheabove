@@ -50,5 +50,17 @@
         "label": "Bluesky"
       }
     ]
+  },
+  {
+    "name": "Somira Som",
+    "pfp": "/pfps/somirasom-pfp.webp",
+    "role": "artist, musician",
+    "bio": "I like touhou a lot, some other stuff i like too like kirby, atelier series, and jrpgs sonic, ut/dt etc. I am crucified by school on a weekly basis but yeah. I also really like yuri, espeically yuri manga and manga in general",
+    "links": [
+      {
+        "url": "https://somira.carrd.co/",
+        "label": "Website"
+      }
+    ]
   }
 ]

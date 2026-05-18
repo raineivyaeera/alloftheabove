@@ -14,7 +14,7 @@
     "date": "May 14th, 2026",
     "type": "video",
     "src": "vids/the little mermaid that could.mp4",
-    "description": ""
+    "description": "this thing can't hold chords, a tune, or its grip to reality, but here's what I managed to record with it!"
     },
     {
     "title": "Love What is Left",
@@ -39,7 +39,7 @@
     "date": "May 18th, 2026",
     "type": "audio",
     "src": "audios/vorp_gensunvox.ogg",
-    "description": ""
+    "description": "First time I've really made generative music in sunvox, and it was super fun. Each export is unique!"
     },
     {
     "title": "Heartbox Corner",
@@ -56,5 +56,13 @@
     "type": "youtube",
     "src": "https://www.youtube.com/embed/mKAy3N4yygo?si=tAOytrFbA7lzW-5W",
     "description": "Finished another song; still trying to do a shoegaze kind of sound (to the best of my ability) in sunvox."
+    },
+    {
+    "title": "Grasss area song",
+    "author": "Somira Som",
+    "date": "May 18th, 2026",
+    "type": "audio",
+    "src": "audios/mg_kirby_10.mp3",
+    "description": "Song for a short game im doing! its a small area theme, i took inspo of some kirby tracks, though use touhou instruments weoji"
     }
 ]
