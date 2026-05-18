@@ -117,6 +117,8 @@ function renderPost(post) {
 
     ${media(post)}
 
+    <h3 class="post-description">${post.description}</h3>
+
     <div class="post-meta">
       <h3>by ${post.author} <span> <img class="post-author-pfp" src="${pfp}"> </span></h3>
       <h4>${post.date}</h4>

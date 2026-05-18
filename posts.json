@@ -6,7 +6,7 @@
     "type": "image",
     "src": "imgs/sunvox_btop.jpg",
     "alt": "abstract over exposed picture showing btop and sunvox poking in the left a bit.",
-    "description": "asdf"
+    "description": ""
     },
     {
     "title": "The Mermaid That Could",
@@ -14,7 +14,7 @@
     "date": "May 14th, 2026",
     "type": "video",
     "src": "vids/the little mermaid that could.mp4",
-    "description": "asdf"
+    "description": ""
     },
     {
     "title": "Love What is Left",
@@ -22,7 +22,7 @@
     "date": "May 15th, 2026",
     "type": "youtube",
     "src": "https://www.youtube.com/embed/DzhcAV3ntmA?si=-Xzg86camfZKF5_c",
-    "description": "asdf"
+    "description": ""
     },
     {
     "title": "[iridescence // 01]",
@@ -31,7 +31,7 @@
     "type": "image",
     "src": "imgs/gradient.webp",
     "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora.",
-    "description": "asdf"
+    "description": ""
     },
     {
     "title": "Vorp (Generative Sunvox)",
@@ -39,7 +39,7 @@
     "date": "May 18th, 2026",
     "type": "audio",
     "src": "audios/vorp_gensunvox.ogg",
-    "description": "asdf"
+    "description": ""
     },
     {
     "title": "Heartbox Corner",
@@ -47,6 +47,14 @@
     "date": "May 18th, 2026",
     "type": "audio",
     "src": "audios/5.17.26 - Heartbox Corner.ogg",
-    "description": "asdf"
+    "description": "a heartbox corner, making it so I can breathe a lil more easily."
+    },
+    {
+    "title": "blood on tiles",
+    "author": "lowlandsotaku",
+    "date": "May 18th, 2026",
+    "type": "youtube",
+    "src": "https://www.youtube.com/embed/mKAy3N4yygo?si=tAOytrFbA7lzW-5W",
+    "description": "Finished another song; still trying to do a shoegaze kind of sound (to the best of my ability) in sunvox."
     }
 ]

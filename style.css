@@ -127,6 +127,11 @@ nav a.active {
 
     box-shadow: 0 0 40px rgba(0, 0, 0, 1);
 }
+.post-description {
+    font-size: 110%;
+    margin: 1.5em;
+    letter-spacing: 0em;
+}
 
 img,
 video {
