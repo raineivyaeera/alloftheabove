@@ -45,7 +45,7 @@ h3 {
 }
 
 h4 {
-    margin-top: 0.2em;
+    margin-top: 0.25em;
     font-size: 1.1rem;
     color: #8b0023;
     font-family: monospace;
@@ -153,7 +153,7 @@ iframe {
 
 audio {
     width: 100%;
-    margin: 1.5em 0;
+    margin: 2.5em 0;
     display: block;
 }
 

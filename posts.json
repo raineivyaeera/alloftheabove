@@ -1,26 +1,26 @@
 [
-  {
+    {
     "title": "Hello World! :D",
     "author": "raine eera",
     "date": "May 14th, 2026",
     "type": "image",
     "src": "imgs/sunvox_btop.jpg",
     "alt": "abstract over exposed picture showing btop and sunvox poking in the left a bit."
-  },
-  {
+    },
+    {
     "title": "The Mermaid That Could",
     "author": "raine eera",
     "date": "May 14th, 2026",
     "type": "video",
     "src": "vids/the little mermaid that could.mp4"
-  },
-  {
+    },
+    {
     "title": "Love What is Left",
     "author": "lowlandsotaku",
     "date": "May 15th, 2026",
     "type": "youtube",
     "src": "https://www.youtube.com/embed/DzhcAV3ntmA?si=-Xzg86camfZKF5_c"
-  },
+    },
     {
     "title": "[iridescence // 01]",
     "author": "ansamko",
@@ -28,5 +28,12 @@
     "type": "image",
     "src": "imgs/gradient.webp",
     "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora."
-  }
+    },
+    {
+    "title": "Vorp (Generative Sunvox)",
+    "author": "raine eera",
+    "date": "May 18th, 2026",
+    "type": "audio",
+    "src": "audios/vorp_gensunvox.ogg"
+    }
 ]
