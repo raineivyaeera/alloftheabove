@@ -33,17 +33,21 @@
   },
   {
     "name": "lowlandsotaku",
-    "pfp": "",
-    "role": "musician, artist",
-    "bio": "n/a",
+    "pfp": "/pfps/lowlandsotaku-pfp.png",
+    "role": "artist, musician",
+    "bio": "i make things occasionally! i like a lot of things but i'm a weeb mainly.",
     "links": [
       {
-        "url": "https://lowlandsotaku.bandcamp.com/album/love-what-is-left",
+        "url": "https://lowlandsotaku.bandcamp.com/",
         "label": "Bandcamp"
       },
       {
         "url": "https://www.youtube.com/@lowlandsotaku",
         "label": "YouTube"
+      },
+      {
+        "url": "https://bsky.app/profile/lowlandsotaku.bsky.social",
+        "label": "Bluesky"
       }
     ]
   }
