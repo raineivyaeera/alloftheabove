@@ -278,6 +278,9 @@ const membersPage =
       <p>
 	    all of the above is a multimedia art collective with no boundary on medium. photography, drawings, songs, audio, video, visual fx, experiments, games, programs, the abstract and the pristine porcelain. all of it has a home here.
       </p>
+      <p>
+	    why do this? well, as my friend Amy quotes, "fun things are fun!"
+      </p>
     </div>
 
     <hr>
