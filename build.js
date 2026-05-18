@@ -276,7 +276,7 @@ const membersPage =
       <h2>about & why</h2>
 
       <p>
-	    all of the above is a multimedia art collective with no boundary on medium. photography, drawings, songs, audio, video, visual fx, experiments, the abstract and the pristine porcelain. all of it has a home here.
+	    all of the above is a multimedia art collective with no boundary on medium. photography, drawings, songs, audio, video, visual fx, experiments, games, programs, the abstract and the pristine porcelain. all of it has a home here.
       </p>
     </div>
 
