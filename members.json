@@ -62,5 +62,17 @@
         "label": "Website"
       }
     ]
+  },
+  {
+    "name": "amaice",
+    "pfp": "/pfps/amypfp.png",
+    "role": "musician, composer, artist, game dev",
+    "bio": "Mostly a musician / composer, jazz pianist ^^ I do electronic stuff too like animal crossing kinda style. I love yuri, mahjong, and cats",
+    "links": [
+      {
+        "url": "https://amaice.net/",
+        "label": "Website"
+      }
+    ]
   }
 ]

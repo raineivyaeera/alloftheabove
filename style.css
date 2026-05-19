@@ -46,8 +46,9 @@ h3 {
 
 h4 {
     margin-top: 0.25em;
-    font-size: 1.1rem;
+    font-size: 1rem; /*1.1rem*/
     color: #8b0023;
+    opacity: 0.6;
     font-family: monospace;
     text-transform: uppercase;
 }
@@ -245,4 +246,60 @@ audio {
 .member-links a:hover {
     color: #ff003c;
     text-shadow: 0 0 8px #ff003c66;
+}
+
+.author-filter-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: #c5b8cc;
+    color: #a07070cc;
+    color: #9b6a78;
+    /*color: #B89ACB;*/
+    /*color: #dd0000;*/
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+.author-filter-btn:hover {
+    color: #ff0010;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+}
+.member-feed-btn {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #8b0023;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.75em;
+    cursor: pointer;
+}
+.member-feed-btn:hover {
+    color: #dd0000;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+}
+
+/* UGH, COUGH */
+#clear-filter-btn {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    background: rgba(2, 0, 3, 0.92);
+    border: 1px solid #8b002366;
+    color:cyan;
+    font-family: monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    transition: color 0.2s, text-shadow 0.2s, border-color 0.2s;
+    z-index: 999;
+}
+#clear-filter-btn:hover {
+    color: #dd0000;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+    border-color: #8b0023cc;
 }

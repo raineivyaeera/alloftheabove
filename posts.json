@@ -64,5 +64,14 @@
     "type": "audio",
     "src": "audios/mg_kirby_10.mp3",
     "description": "Song for a short game im doing! its a small area theme, i took inspo of some kirby tracks, though use touhou instruments weoji"
+    },
+    {
+    "title": "Grand Tour",
+    "author": "amaice",
+    "date": "May 19th, 2026",
+    "type": "image",
+    "src": "imgs/grand_tour2.png",
+    "alt": "an abstract canvas digital painting that looks like mountains and a blue sky.",
+    "description": "made a funny png. inspired by American Road In New Jersey"
     }
 ]
