@@ -34,7 +34,7 @@ body {
 h2 {
     letter-spacing: 0.05em;
     line-height: 1.5em;
-    color: #dbdbdb;
+    color: #e8e8e8;
 }
 
 h3 {
@@ -47,7 +47,7 @@ h3 {
 h4 {
     margin-top: 0.25em;
     font-size: 1rem; /*1.1rem*/
-    color: #8b0023;
+    color: #787878;
     opacity: 0.6;
     font-family: monospace;
     text-transform: uppercase;
@@ -61,7 +61,7 @@ p {
 hr {
     border: 0;
     border-top: 1px dashed #8b0023;
-    margin: 2.5em 10%;
+    margin: 0em 10% 3em;
 }
 
 .header {
@@ -72,7 +72,7 @@ hr {
 
 .header h1 {
     color: #dd0000;
-    text-shadow: 0 0 15px rgba(255, 0, 60, 0.4), 0 0 2px white;
+    text-shadow: 0 0 15px rgba(255, 0, 60, 0.4), 0 0 2px rgb(255, 255, 255);
     text-transform: lowercase;
     letter-spacing: 0.3em;
     margin: 0;
@@ -91,7 +91,7 @@ nav {
     margin-top: 1.5em;
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 1.5em;
     font-family: monospace;
     font-size: 1rem;
     letter-spacing: 0.15em;
@@ -115,7 +115,7 @@ nav a.active {
 .strip {
     background-color: rgba(0, 0, 0, 0.95);
 
-    padding: 2.5rem 2rem;
+    padding: 0.5rem 2rem;
 
     max-width: 800px;
     width: 90%;
@@ -132,6 +132,10 @@ nav a.active {
     font-size: 110%;
     margin: 1.5em;
     letter-spacing: 0em;
+}
+
+.post-meta {
+    padding-bottom: 1.5em;
 }
 
 img,
@@ -183,11 +187,13 @@ audio {
 
 .members-intro p {
     opacity: 0.92;
+    margin-bottom: 3em;
 }
 
 .member {
     text-align: left;
     padding: 0.5em;
+    margin-bottom: 3em;
 }
 
 .member-header {
@@ -195,6 +201,7 @@ audio {
     flex-direction: row;
     justify-content: flex-start;
     gap: 1.5em;
+    margin-bottom: 1.7em;
 }
 
 .member-text {
@@ -204,7 +211,9 @@ audio {
 }
 
 .member-pfp {
-    width: 6em;
+    width: 7em;
+    padding: 0;
+    margin: 0;
     border-radius: 50%;
     border: 1px solid #ff003c66;
     box-shadow: 0 0 10px #ff003c66;
@@ -219,9 +228,10 @@ audio {
     display: inline-block;
     font-family: monospace;
     font-size: 0.85rem;
-    color: #8b0023;
+    color: #a7002a;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
 }
 
 .member-links {
@@ -241,7 +251,7 @@ audio {
     font-size: 0.9rem;
 }
 
-.member-links a::before { content: "→ "; opacity: 0.5; }
+.member-links a::before { content: "-> "; opacity: 0.5; }
 
 .member-links a:hover {
     color: #ff003c;
@@ -249,35 +259,34 @@ audio {
 }
 
 .author-filter-btn {
+    align-self: flex-start;
     background: none;
     border: none;
     padding: 0;
     margin: 0;
     font: inherit;
-    color: #c5b8cc;
-    color: #a07070cc;
-    color: #9b6a78;
-    /*color: #B89ACB;*/
-    /*color: #dd0000;*/
+    color: #f82649;
+    text-decoration: underline;
     cursor: pointer;
     transition: color 0.2s, text-shadow 0.2s;
 }
 .author-filter-btn:hover {
-    color: #ff0010;
+    color: #a9000b;
     text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
 }
 .member-feed-btn {
     display: inline-block;
     font-family: monospace;
     font-size: 0.85rem;
-    color: #8b0023;
+    color: #ff0040;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 0.75em;
     cursor: pointer;
 }
 .member-feed-btn:hover {
-    color: #dd0000;
+    color: #980000;
     text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
 }
 
@@ -292,12 +301,13 @@ audio {
     font-family: monospace;
     font-size: 0.85rem;
     letter-spacing: 0.1em;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.6em;
     cursor: pointer;
     box-shadow: 0 0 15px rgba(0,0,0,0.8);
     transition: color 0.2s, text-shadow 0.2s, border-color 0.2s;
     z-index: 999;
 }
+
 #clear-filter-btn:hover {
     color: #dd0000;
     text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);

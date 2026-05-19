@@ -14,20 +14,20 @@
   {
     "name": "ansamko",
     "pfp": "/pfps/ansamko-pfp.webp",
-    "role": "game/web developer, designer",
-    "bio": "some sort of a gay creature, maybe working on the site, maybe not. who knows.",
+    "role": "game/web developer, designer, video editor",
+    "bio": "some sort of a gay creature, creating all kinds of things, maybe working on the site, maybe not. who knows.",
     "links": [
       {
         "url": "https://ansamko.itch.io/",
-        "label": "Itch.io"
+        "label": "itch.io"
       },
       {
         "url": "https://bsky.app/profile/ansamko.fi",
-        "label": "Bluesky"
+        "label": "bluesky"
       },
       {
         "url": "https://ansamko.fi/",
-        "label": "Website"
+        "label": "ansamko.fi"
       }
     ] 
   },

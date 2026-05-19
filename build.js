@@ -159,6 +159,7 @@ function renderMember(member) {
                 <p class="member-role">
                     ${member.role}
                 </p>
+                <button class="author-filter-btn member-feed-btn" data-author="${member.name}">-> artist feed</button>
             </div>
         </div>
 
@@ -167,8 +168,6 @@ function renderMember(member) {
         </p>
 
         ${links}
-
-        <button class="author-filter-btn member-feed-btn" data-author="${member.name}">→ artist feed</button>
     </div>`;
 }
 

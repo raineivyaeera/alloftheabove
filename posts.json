@@ -31,7 +31,7 @@
     "type": "image",
     "src": "imgs/gradient.webp",
     "alt": "a noisy gradient with yellow, pink, blue and greenish hue to it, looks slightly like some sort of a glitched aurora.",
-    "description": ""
+    "description": "part 1 of iridescence."
     },
     {
     "title": "Vorp (Generative Sunvox)",
@@ -73,5 +73,14 @@
     "src": "imgs/grand_tour2.png",
     "alt": "an abstract canvas digital painting that looks like mountains and a blue sky.",
     "description": "made a funny png. inspired by American Road In New Jersey"
+    },
+    {
+    "title": "[iridescence // 02]",
+    "author": "ansamko",
+    "date": "May 20th, 2026",
+    "type": "image",
+    "src": "imgs/gradient2.png",
+    "alt": "a noisy gradient with blue, green, purpleish hue to it, looks slightly like some sort of a glitched aurora.",
+    "description": "part 2 of iridescence."
     }
 ]
