@@ -74,5 +74,21 @@
         "label": "Website"
       }
     ]
+  },
+    {
+    "name": "Shanzikull",
+    "pfp": "/pfps/shanzi-pfp.jpeg",
+    "role": "video editor, graphic & motion designer, poet",
+    "bio": "human sometimes",
+    "links": [
+      {
+        "url": "https://shanzikull.neocities.org/",
+        "label": "Website"
+      },
+      {
+        "url": "https://bsky.app/profile/shanzikull.bsky.social",
+        "label": "Bluesky"
+      }
+    ]
   }
 ]
