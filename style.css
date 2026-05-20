@@ -45,9 +45,12 @@ h3 {
 }
 
 h4 {
-    margin-top: 0.25em;
+    margin-top: .25em;
+    padding-top: .125em;
     font-size: 1rem; /*1.1rem*/
-    color: #787878;
+    /*color: #787878;*/
+    /*color: #FF6879bb;*/
+    color: #CC6879cc;
     opacity: 0.6;
     font-family: monospace;
     text-transform: uppercase;
@@ -115,7 +118,7 @@ nav a.active {
 .strip {
     background-color: rgba(0, 0, 0, 0.95);
 
-    padding: 0.5rem 2rem;
+    padding: 1.25rem 2rem;
 
     max-width: 800px;
     width: 90%;
