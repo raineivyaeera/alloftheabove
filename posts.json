@@ -82,5 +82,14 @@
     "src": "imgs/gradient2.png",
     "alt": "a noisy gradient with blue, green, purpleish hue to it, looks slightly like some sort of a glitched aurora.",
     "description": "part 2 of iridescence."
+    },
+    {
+    "title": "palace in your bedroom",
+    "author": "Shanzikull",
+    "date": "May 24th, 2026",
+    "type": "image",
+    "src": "imgs/palace_in_your_bedroom.webp",
+    "alt": "an abstract composition with a poem in the left. to the center right is a chair in a brightly overexposed space, with a bit of tree/dirt terrain poking out from the bottom right. the poem itself reads 'overbearing sunlight floods these chambers such - regal cloak amalgams thy silhouette in flux - regent of nowhere at all - ever tightening crown - a palace in your bedroom - scepters sprouting through - sovereign shoulders you - its throne cold ground - horizontally perfect posture - derelict decrees - spread digit pleas - god i am suffocating here - lo a galvanizing echo - law adhering carrion - a solemn march departing - realms outside thy binding - their rites ignite your coffin - in spontaneous conflagration - and it feels as though you're waking - eyes wide open - feet meet grass - farewell goes unspoken - and a carpet marks your path'",
+    "description": "inspired by a synth demo from raine"
     }
 ]

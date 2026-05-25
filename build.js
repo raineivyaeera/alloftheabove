@@ -51,7 +51,7 @@ function media(post) {
             title="${post.title}"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referreypolicy="strict-origin-when-cross-origin"
+            referrerpolicy="strict-origin-when-cross-origin"
             loading="lazy"
             allowfullscreen>
         </iframe>`;
@@ -239,6 +239,7 @@ const paginationScript = `
 
         let filterPageBtns = [];
         if (filteredPageCount > 1 && paginationEl) {
+	    paginationEl.innerHTML = '';
             paginationEl.style.display = 'flex';
             for (let p = 1; p <= filteredPageCount; p++) {
                 const b = document.createElement('a');
@@ -247,6 +248,14 @@ const paginationScript = `
                 b.dataset.page = p;
                 b.style.cssText = 'color: #dbdbdb99; text-decoration: none; cursor: pointer;';
                 b.textContent = '[' + p + ']';
+
+		// im way too fucking lazy
+		if (p === 1) { 
+                    b.style.color = '#dd0000'; 
+                    b.style.textShadow = '0 0 10px rgba(255, 0, 60, 0.4)'; 
+                    b.style.pointerEvents = 'none'; 
+                }
+
                 paginationEl.appendChild(b);
                 filterPageBtns.push(b);
                 b.addEventListener('click', e => {

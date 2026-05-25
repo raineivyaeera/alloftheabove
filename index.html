@@ -22,6 +22,24 @@
     <div class="strip">
         
     <div class="post">
+        <h2>palace in your bedroom</h2>
+
+        
+        <img
+            src="imgs/palace_in_your_bedroom.webp"
+            alt="an abstract composition with a poem in the left. to the center right is a chair in a brightly overexposed space, with a bit of tree/dirt terrain poking out from the bottom right. the poem itself reads 'overbearing sunlight floods these chambers such - regal cloak amalgams thy silhouette in flux - regent of nowhere at all - ever tightening crown - a palace in your bedroom - scepters sprouting through - sovereign shoulders you - its throne cold ground - horizontally perfect posture - derelict decrees - spread digit pleas - god i am suffocating here - lo a galvanizing echo - law adhering carrion - a solemn march departing - realms outside thy binding - their rites ignite your coffin - in spontaneous conflagration - and it feels as though you're waking - eyes wide open - feet meet grass - farewell goes unspoken - and a carpet marks your path'"
+            loading="lazy">
+
+        <h3 class="post-description">inspired by a synth demo from raine</h3>
+
+        <div class="post-meta">
+            <h3>by <button class="author-filter-btn" data-author="Shanzikull">Shanzikull</button> <span> <img class="post-author-pfp" src="/pfps/shanzi-pfp.jpg"> </span></h3>
+            <h4>May 24th, 2026</h4>
+        </div>
+    </div>
+<hr class="post-divider">
+
+    <div class="post">
         <h2>[iridescence // 02]</h2>
 
         
@@ -80,7 +98,7 @@
             title="blood on tiles"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referreypolicy="strict-origin-when-cross-origin"
+            referrerpolicy="strict-origin-when-cross-origin"
             loading="lazy"
             allowfullscreen>
         </iframe>
@@ -149,7 +167,7 @@
             title="Love What is Left"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referreypolicy="strict-origin-when-cross-origin"
+            referrerpolicy="strict-origin-when-cross-origin"
             loading="lazy"
             allowfullscreen>
         </iframe>
@@ -193,7 +211,7 @@
             <h4>May 14th, 2026</h4>
         </div>
     </div>
-        
+        <div class="pagination" style="font-family: monospace; margin-top: 3em; display: flex; justify-content: center; gap: 1em;"><a href="#" class="page-btn" data-page="1" style="color: #dbdbdb99; text-decoration: none; cursor: pointer;">[1]</a><a href="#" class="page-btn" data-page="2" style="color: #dbdbdb99; text-decoration: none; cursor: pointer;">[2]</a></div>
     </div>
     
 <script>
@@ -244,6 +262,7 @@
 
         let filterPageBtns = [];
         if (filteredPageCount > 1 && paginationEl) {
+	    paginationEl.innerHTML = '';
             paginationEl.style.display = 'flex';
             for (let p = 1; p <= filteredPageCount; p++) {
                 const b = document.createElement('a');
@@ -252,6 +271,14 @@
                 b.dataset.page = p;
                 b.style.cssText = 'color: #dbdbdb99; text-decoration: none; cursor: pointer;';
                 b.textContent = '[' + p + ']';
+
+		// im way too fucking lazy
+		if (p === 1) { 
+                    b.style.color = '#dd0000'; 
+                    b.style.textShadow = '0 0 10px rgba(255, 0, 60, 0.4)'; 
+                    b.style.pointerEvents = 'none'; 
+                }
+
                 paginationEl.appendChild(b);
                 filterPageBtns.push(b);
                 b.addEventListener('click', e => {
