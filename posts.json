@@ -91,5 +91,21 @@
     "src": "imgs/palace_in_your_bedroom.webp",
     "alt": "an abstract composition with a poem in the left. to the center right is a chair in a brightly overexposed space, with a bit of tree/dirt terrain poking out from the bottom right. the poem itself reads 'overbearing sunlight floods these chambers such - regal cloak amalgams thy silhouette in flux - regent of nowhere at all - ever tightening crown - a palace in your bedroom - scepters sprouting through - sovereign shoulders you - its throne cold ground - horizontally perfect posture - derelict decrees - spread digit pleas - god i am suffocating here - lo a galvanizing echo - law adhering carrion - a solemn march departing - realms outside thy binding - their rites ignite your coffin - in spontaneous conflagration - and it feels as though you're waking - eyes wide open - feet meet grass - farewell goes unspoken - and a carpet marks your path'",
     "description": "inspired by a synth demo from raine"
+    },
+    {
+    "title": "Somnia",
+    "author": "raine eera",
+    "date": "June 4th, 2026",
+    "type": "audio",
+    "src": "audios/Somnia.mp3",
+    "description": "a tiny improv on guitar while using a new effects processor"
+    },
+    {
+    "title": "flatland archway",
+    "author": "lowlandsotaku",
+    "date": "June 4th, 2026",
+    "type": "youtube",
+    "src": "https://www.youtube.com/embed/xQ67st32d7s?si=vHLBh12oaHDFCf_A",
+    "description": "another sunvox track. tried making some longer drone sounds on this one. big shout out to raine for advice + support w/ mixing/arranging this thing :)"
     }
 ]
