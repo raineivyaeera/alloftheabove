@@ -114,11 +114,11 @@
         "date": "June 17th, 2026",
         "type": "image",
         "src": [
-            "imgs/Meremisa.webp",
             "imgs/Yuratia.webp",
-	    "imgs/Ellivia.webp"
+	    "imgs/Ellivia.webp",
+            "imgs/Meremisa.webp"
         ],
-        "description": "testing gallery view!"
+        "description": "A couple of yuriful doodles I did at the beginning of june <3"
     },
     {
     "title": "Short Lovely Composer Song",
