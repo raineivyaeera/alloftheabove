@@ -47,9 +47,7 @@ h3 {
 h4 {
     margin-top: .25em;
     padding-top: .125em;
-    font-size: 1rem; /*1.1rem*/
-    /*color: #787878;*/
-    /*color: #FF6879bb;*/
+    font-size: 1rem;
     color: #CC6879cc;
     opacity: 0.6;
     font-family: monospace;
@@ -131,6 +129,7 @@ nav a.active {
 
     box-shadow: 0 0 40px rgba(0, 0, 0, 1);
 }
+
 .post-description {
     font-size: 110%;
     margin: 1.5em;
@@ -139,6 +138,59 @@ nav a.active {
 
 .post-meta {
     padding-bottom: 1.5em;
+}
+
+.post-author-pfp {
+    width: 1.5em;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ff003c66;
+    box-shadow: 0 0 10px #ff003c66;
+    vertical-align: text-top;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.2em;
+}
+
+.author-filter-btn {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: #f82649;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.author-filter-btn:hover {
+    color: #a9000b;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+}
+
+#clear-filter-btn {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    background: rgba(2, 0, 3, 0.92);
+    border: 1px solid #8b002366;
+    color: cyan;
+    font-family: monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    padding: 0.5em 0.6em;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    transition: color 0.2s, text-shadow 0.2s, border-color 0.2s;
+    z-index: 999;
+}
+
+#clear-filter-btn:hover {
+    color: #dd0000;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+    border-color: #8b0023cc;
 }
 
 img,
@@ -176,17 +228,74 @@ audio {
     font-size: 0.9rem;
 }
 
-.post-author-pfp {
-    width: 1.5em;
-    display: inline-block;
-    border-radius: 50%;
-    border: 1px solid #ff003c66;
-    box-shadow: 0 0 10px #ff003c66;
-    vertical-align: text-top;
-    margin: 0;
-    padding: 0;
-    margin-left: 0.2em;
+.gallery-wrapper {
+    width: 100%;
+    margin: 1.5em 0;
 }
+
+.media-group-image {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    scrollbar-width: none;
+}
+
+.media-group-image img {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 48vh; 
+    object-fit: contain;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 1.75em;
+    font-family: monospace;
+}
+
+.gallery-nav-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #dbdbdb99;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.gallery-nav-btn:hover {
+    color: #dd0000;
+    text-shadow: 0 0 10px rgba(255, 0, 60, 0.4);
+}
+
+.media-group-audio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    margin: 2em 0;
+}
+
+.media-group-audio audio { margin: 0; }
+
+.media-group-video,
+.media-group-youtube,
+.media-group-embed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 1.5em 0;
+}
+
+.media-group-video video,
+.media-group-youtube iframe,
+.media-group-embed iframe { margin: 0; }
 
 .members-intro p {
     opacity: 0.92;
@@ -261,22 +370,6 @@ audio {
     text-shadow: 0 0 8px #ff003c66;
 }
 
-.author-filter-btn {
-    align-self: flex-start;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    color: #f82649;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: color 0.2s, text-shadow 0.2s;
-}
-.author-filter-btn:hover {
-    color: #a9000b;
-    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
-}
 .member-feed-btn {
     display: inline-block;
     font-family: monospace;
@@ -288,31 +381,8 @@ audio {
     margin-top: 0.75em;
     cursor: pointer;
 }
+
 .member-feed-btn:hover {
     color: #980000;
     text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
-}
-
-/* UGH, COUGH */
-#clear-filter-btn {
-    position: fixed;
-    bottom: 1.5em;
-    right: 1.5em;
-    background: rgba(2, 0, 3, 0.92);
-    border: 1px solid #8b002366;
-    color:cyan;
-    font-family: monospace;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    padding: 0.5em 0.6em;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    transition: color 0.2s, text-shadow 0.2s, border-color 0.2s;
-    z-index: 999;
-}
-
-#clear-filter-btn:hover {
-    color: #dd0000;
-    text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
-    border-color: #8b0023cc;
 }

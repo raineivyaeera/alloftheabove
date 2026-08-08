@@ -1,16 +1,13 @@
 const fs = require('fs');
 
-const posts = JSON.parse(
-    fs.readFileSync('posts.json', 'utf8')
-);
-
-const members = JSON.parse(
-    fs.readFileSync('members.json', 'utf8')
-);
+const posts = JSON.parse(fs.readFileSync('posts.json', 'utf8'));
+const members = JSON.parse(fs.readFileSync('members.json', 'utf8'));
 
 function pageStart(title) {
     return `<!DOCTYPE html>
-<html> <head> <title>${title} — alloftheabove</title>
+<html>
+<head>
+    <title>${title} — alloftheabove</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>`;
@@ -21,17 +18,9 @@ function header(current = '') {
     <div class="header">
         <h1>all of the above</h1>
         <h3>(this site is very under construction!)</h3>
-
         <nav>
-            <a href="index.html"
-                ${current === 'home' ? 'class="active"' : ''}>
-                home
-            </a>
-
-            <a href="members.html"
-                ${current === 'members' ? 'class="active"' : ''}>
-                members
-            </a>
+            <a href="index.html" ${current === 'home' ? 'class="active"' : ''}>home</a>
+            <a href="members.html" ${current === 'members' ? 'class="active"' : ''}>members</a>
         </nav>
     </div>`;
 }
@@ -43,12 +32,12 @@ function pageEnd() {
 </html>`;
 }
 
-function media(post) {
-    if (post.type === 'youtube') {
+function renderSingleMedia(type, src, title = '', alt = '') {
+    if (type === 'youtube') {
         return `
         <iframe
-            src="${post.src}"
-            title="${post.title}"
+            src="${src}"
+            title="${title}"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -57,63 +46,76 @@ function media(post) {
         </iframe>`;
     }
 
-    if (post.type === 'video') {
-        return `<video controls src="${post.src}" preload="metadata"></video>`;
+    if (type === 'video') {
+        return `<video controls src="${src}" preload="metadata"></video>`;
     }
 
-    if (post.type === 'image') {
+    if (type === 'image') {
         return `
         <img
-            src="${post.src}"
-            alt="${post.alt || post.title}"
+            src="${src}"
+            alt="${alt || title}"
             loading="lazy">`;
     }
 
-    if (post.type === 'audio') {
-        return `<audio controls src="${post.src}" preload="metadata"></audio>`;
+    if (type === 'audio') {
+        return `<audio controls src="${src}" preload="metadata"></audio>`;
     }
 
-    if (post.type === 'embed') {
+    if (type === 'embed') {
         return `
         <iframe
-            src="${post.src}"
-            title="${post.title}"
+            src="${src}"
+            title="${title}"
             frameborder="0"
             loading="lazy"
             allowfullscreen>
         </iframe>`;
     }
 
-    return `
-    <p class="unknown-type">
-        [unknown media type: ${post.type}]
-    </p>`;
+    return `<p class="unknown-type">[unknown media type: ${type}]</p>`;
+}
+
+function media(post) {
+    const sources = Array.isArray(post.src) ? post.src : [post.src];
+    const renderedItems = sources
+        .map(src => renderSingleMedia(post.type, src, post.title, post.alt))
+        .join('\n');
+
+    if (sources.length > 1) {
+        if (post.type === 'image') {
+            return `
+            <div class="gallery-wrapper">
+                <div class="media-group media-group-image">${renderedItems}</div>
+                <div class="gallery-controls">
+                    <button class="gallery-nav-btn" onclick="this.closest('.gallery-wrapper').querySelector('.media-group-image').scrollBy({left: -this.closest('.gallery-wrapper').querySelector('.media-group-image').clientWidth, behavior: 'smooth'})">[ &lt; ]</button>
+                    <button class="gallery-nav-btn" onclick="this.closest('.gallery-wrapper').querySelector('.media-group-image').scrollBy({left: this.closest('.gallery-wrapper').querySelector('.media-group-image').clientWidth, behavior: 'smooth'})">[ &gt; ]</button>
+                </div>
+            </div>`;
+        }
+        return `<div class="media-group media-group-${post.type}">${renderedItems}</div>`;
+    }
+
+    return renderedItems;
 }
 
 function renderPost(post) {
-    let pfp = '';
-    let member = null;
+    let pfp = '/pfps/temp.jpg';
 
     try {
-        member = members.find(m => m.name === post.author);
-        if (member.pfp) {
+        const member = members.find(m => m.name === post.author);
+        if (member && member.pfp) {
             pfp = member.pfp;
-        } else {
-            pfp = '/pfps/temp.jpg';
         }
     } catch (error) {
         console.error(`⚠️ Author name doesn't match any member for post "${post.title}":`);
-        pfp = '/pfps/temp.jpg';
     }
 
     return `
     <div class="post">
         <h2>${post.title}</h2>
-
         ${media(post)}
-
         <h3 class="post-description">${post.description}</h3>
-
         <div class="post-meta">
             <h3>by <button class="author-filter-btn" data-author="${post.author}">${post.author}</button> <span> <img class="post-author-pfp" src="${pfp}"> </span></h3>
             <h4>${post.date}</h4>
@@ -123,7 +125,7 @@ function renderPost(post) {
 
 function renderMember(member) {
     let links = '';
-    let pfp = '';
+    const pfp = member.pfp || '/pfps/temp.jpg';
     
     if (member.links?.length) {
         links = `
@@ -138,41 +140,22 @@ function renderMember(member) {
         </ul>`;
     }
 
-    if (member.pfp) {
-        pfp = member.pfp;
-    } else {
-        pfp = '/pfps/temp.jpg';
-    }
-
     return `
     <div class="member">
         <div class="member-header">
-        
             <img class="member-pfp" src="${pfp}" alt="${member.name}'s profile picture">
-        
             <div class="member-text">
-        
-                <h2 class="member-name">
-                    ${member.name}
-                </h2>
-        
-                <p class="member-role">
-                    ${member.role}
-                </p>
+                <h2 class="member-name">${member.name}</h2>
+                <p class="member-role">${member.role}</p>
                 <button class="author-filter-btn member-feed-btn" data-author="${member.name}">-> artist feed</button>
             </div>
         </div>
-
-        <p class="member-bio">
-            ${member.bio}
-        </p>
-
+        <p class="member-bio">${member.bio}</p>
         ${links}
     </div>`;
 }
 
 const POSTS_PER_PAGE = 10;
-
 const sortedPosts = [...posts].reverse();
 
 const home = sortedPosts
@@ -234,12 +217,11 @@ const paginationScript = `
         }
 
         const filteredPageCount = Math.ceil(visiblePosts.length / postsPerPage);
-
         pageButtons.forEach(b => b.style.display = 'none');
 
         let filterPageBtns = [];
         if (filteredPageCount > 1 && paginationEl) {
-	    paginationEl.innerHTML = '';
+            paginationEl.innerHTML = '';
             paginationEl.style.display = 'flex';
             for (let p = 1; p <= filteredPageCount; p++) {
                 const b = document.createElement('a');
@@ -249,8 +231,7 @@ const paginationScript = `
                 b.style.cssText = 'color: #dbdbdb99; text-decoration: none; cursor: pointer;';
                 b.textContent = '[' + p + ']';
 
-		// im way too fucking lazy
-		if (p === 1) { 
+                if (p === 1) { 
                     b.style.color = '#dd0000'; 
                     b.style.textShadow = '0 0 10px rgba(255, 0, 60, 0.4)'; 
                     b.style.pointerEvents = 'none'; 
@@ -352,17 +333,13 @@ const paginationScript = `
 </script>
 `;
 
-const indexPage =
-    pageStart('alloftheabove') +
-    header('home') +
-    `
+const indexPage = pageStart('alloftheabove') + header('home') + `
     <div class="strip">
         ${home}
         ${paginationControls}
     </div>
     ${paginationScript}
-    ` +
-    pageEnd();
+` + pageEnd();
 
 fs.writeFileSync('index.html', indexPage);
 console.log(`built index.html (${sortedPosts.length} posts managed via client paginationnationnation)`);
@@ -371,15 +348,10 @@ const people = members
     .map(renderMember)
     .join('\n<hr>\n');
 
-const membersPage =
-    pageStart('members') +
-    header('members') +
-    `
+const membersPage = pageStart('members') + header('members') + `
     <div class="strip">
-
         <div class="members-intro">
             <h2>about & why</h2>
-
             <p>
                 all of the above is a multimedia art collective with no boundary on medium. photography, drawings, songs, audio, video, visual fx, experiments, games, programs, the abstract and the pristine porcelain. all of it has a home here.
             </p>
@@ -387,9 +359,7 @@ const membersPage =
                 why do this? well, as my friend Amy quotes, "fun things are fun!"
             </p>
         </div>
-
         <hr>
-
         ${people}
     </div>
     <script>
@@ -402,9 +372,7 @@ const membersPage =
             });
         });
     </script>
-    ` +
-    pageEnd();
+` + pageEnd();
 
 fs.writeFileSync('members.html', membersPage);
-
 console.log(`built members.html (${members.length} members)`);

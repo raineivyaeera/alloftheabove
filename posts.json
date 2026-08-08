@@ -107,5 +107,25 @@
     "type": "youtube",
     "src": "https://www.youtube.com/embed/xQ67st32d7s?si=vHLBh12oaHDFCf_A",
     "description": "another sunvox track. tried making some longer drone sounds on this one. big shout out to raine for advice + support w/ mixing/arranging this thing :)"
+    },
+    {
+        "title": "Happy June!",
+        "author": "Kathinka",
+        "date": "June 17th, 2026",
+        "type": "image",
+        "src": [
+            "imgs/Meremisa.webp",
+            "imgs/Yuratia.webp",
+	    "imgs/Ellivia.webp"
+        ],
+        "description": "testing gallery view!"
+    },
+    {
+    "title": "Short Lovely Composer Song",
+    "author": "Somira Som",
+    "date": "July 3rd, 2026",
+    "type": "audio",
+    "src": "audios/99.wav",
+    "description": "I always wanted to try out using some chiptune program esp lsdj but using a tracker rather than a piano roll is very not fun but this has that piano roll so yay. Its just very short since i was trying to learn the program but im happy with it!"
     }
 ]

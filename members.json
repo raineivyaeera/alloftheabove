@@ -90,5 +90,21 @@
         "label": "Bluesky"
       }
     ]
+  },
+    {
+    "name": "Kathinka",
+    "pfp": "/pfps/kathinka-pfp.webp",
+    "role": "artist, game developer",
+    "bio": "I'm Kathinka and I like to draw pretty girls",
+    "links": [
+      {
+        "url": "https://kathinkapng.itch.io/",
+        "label": "Itch.io"
+      },
+      {
+        "url": "https://www.instagram.com/kathinka.png/",
+        "label": "Instagram"
+      }
+    ]
   }
 ]
